@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habbit App</title>
+    <link rel="stylesheet" href="styles\main.css"/>
+</head>
+<body>
+    <div class="app">
+        <div class="panel">
+            <img class="logo" src="images\Group 74 (1).svg" alt="лого"/>
+            <nav class="menu">
+                <div class="menu__list">
+                </div>
+            <div>
+                <button class="menu__add" onclick="togglePopup()">
+                    <img src="images\Add.png"alt="добавление привычки" >
+                </button>
+            </div>
+                
+            </nav>
+        </div>
+        <div class="content">
+            <header>
+                <h1 class="h1">-</h1>
+                <div class="progress">
+                    <div class="progress__text">
+                        <div class="progress__name">прогресс</div>
+                        <div class="progress__percent">%</div>
+                    </div>
+                    <div class="progress__bar">
+                        <div class="progress__cover__bar"></div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div id="days">
+                    <div class="habbit">
+                    </div>
+                </div>
+                <div class="habbit">
+                    <div class="habbit__day"> день</div>
+                        <form   class="habbit__form"                     onsubmit="addDays(event)"><input name="comment" 
+                        class="input__icon" 
+                        type="text" 
+                        placeholder="комментарий">
+                        <button class="ready">Готово</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </main>
+        </div>
+    </div>
+    <div class="cover_hidden cover" id="aadd">
+        <div class="popup">
+            <h2>новая привычка</h2>
+            <div class="icon-label">иконка</div>
+            <div class="icon-select">
+                <button class="labellic">
+                    <img src="images\sport.svg" alt="иконка спорт">
+                </button>
+                <button class="labellic">
+                    <img src="images\water.svg" alt="иконка спорт">
+                </button>
+                <button class="labellic">
+                    <img src="images\food.svg" alt="иконка спорт">
+                </button>
+            </div>
+                <form class="popup__form">
+                    <div class="form_div">
+                        <input type="text" name="name" placeholder="название">
+                        <input type="number" name="target" placeholder="цель">
+                    </div>
+                    <button class="ready" type="submit">добавить</button>
+                </form>
+                <button class="popup__close" onclick="togglePopup()">
+                    <img src="images\delete.svg" alt="иконка закртия">
+                </button>
+            
+        </div>
+    </div>
+    <script src="scripts\app.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@ let habbits = []
 const HABBIT_KEY = "HABBIT_KEY"
 let globalactivehabbitID; 
 
-// utils пишу для проверка гита
+// utils пишу для проверка гита 
 
 
 const page = {
